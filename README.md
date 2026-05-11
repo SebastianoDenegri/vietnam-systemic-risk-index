@@ -5,4 +5,4 @@ We develop a framework to capture different dimensions of financial systemic ris
 
 We quantify systemic risk by building a composite index (VSRI - the Vietnam Systemic Risk Index) to model market vulnerability and predict financial stress events.  
 
-The scope of the project is to establish a data-driven, structured framework to quantify financial systemic risk in Vietnam and predict future stress events, providing insights on the main drivers of financial distress, in a young, fast-growing, and under-studied market.
+The scope of the project is to establish a data-driven, structured framework to quantify financial systemic risk in Vietnam providing insights on the main drivers of financial distress in a young, fast-growing, and under-studied market.
