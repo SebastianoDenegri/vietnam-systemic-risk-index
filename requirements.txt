@@ -1,0 +1,12 @@
+!pip install akshare
+!pip install arch
+!pip install hmmlearn
+!pip install keras-tuner
+
+All needed data is included in this repository in the data folder.
+When running the notebooks: refuse the Google Drive connection and upload the file with the exact name as specified in the code when prompted to do so.
+Main Notebook with all results: notebooks/A_Systemic_Risk_Framework_for_the_Vietnamese_Market_a_Composite_Risk_Index_and_Financial_Stress_Prediction.ipynb 
+
+notebooks/Estimating_the_Single_Company_Delta_CoVaR_for_the_Vietnam_Tail_Risk_Indicator_(VTRI).ipynb and notebooks/Estimating_the_pairwise_Granger_coefficents_for_the_VGCI.ipynb are pre-requisites for constructing the VTRI and the VGCI.
+notebooks/machine_learning: includes notebooks for ML models training
+notebooks/appendix_c: includes notebooks for LSTM Sensitivity Analysis.
