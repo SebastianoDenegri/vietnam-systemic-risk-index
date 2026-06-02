@@ -15,7 +15,7 @@ notebooks/Estimating_the_pairwise_Granger_coefficents_for_the_VGCI.ipynb:
 estimating the Granger coefficents across international markets for constructing the VGCI.
 
 notebooks/machine_learning:
-includes notebooks for ML models training.
+the folder includes notebooks for ML models training.
 
 notebooks/appendix_c:
-includes notebooks for LSTM sensitivity analysis.
+the folder includes notebooks for LSTM sensitivity analysis.
