@@ -51,24 +51,19 @@ The results of the study provide evidence that the VSRI can be a useful tool for
 ## Repository Structure
 
 ```text
-a_systemic_risk_framework_for_the_vietnamese_market/
-├── data/                    # Datasets used throughout the project
-│   ├── vsri_construction/   # Datasets used for contructing the VSRI and its risk sub-indicators
-│   ├── machine_learning/    # Datasets used for training and evaluating the machine learning models
-│   │   ├── ml_results/      # Parquet files with the results of the Machine Learning analysis
-│   ├── appendix_c/          # Parquet files with the results of the robustness analysis
-├── notebooks/               # Jupyter notebooks containing the full analysis pipeline
-│   ├── A_Systemic_Risk_Framework_for_the_Vietnamese_Market_a_Composite_Risk_Index_and_Financial_Stress_Prediction.ipynb # Main notebook containing all results
-│   ├── Estimating_the_Single_Company_Delta_CoVaR_for_the_Vietnam_Tail_Risk_Indicator_(VTRI).ipynb                       # Notebook for estimating Delta_CoVaRs for constructing the VTRI.
-│   ├── Estimating_the_pairwise_Granger_coefficents_for_the_VGCI.ipynb                                                   # Notebook for estimating the Granger coefficents across international markets for constructing the VGCI.
-│   ├── machine_learning/   # Jupyter notebooks containing the machine learning analysis
-│   │   ├── Disaggregate_Sub_Indices_Predicting_Financial_Stress_Events.ipynb                    # Notebook for training and testing the ML models on the disaggregate sub indicators
-│   │   ├── Stress_Proxy_Predicting_Financial_Stress_Events.ipynb                                # Notebook for training and testing the ML models on market volatility
-│   │   ├── VSRI_Predicting_Financial_Stress_Events.ipynb                                        # Notebook for training and testing the ML models on the VSRI composite index
-│   ├── appendix_c/         # Jupyter notebooks containing robustness analysis to verify LSTM results stability under different seeds
-│   │   ├── Appendix_C1_VSRI.ipynb                                         # Notebook for traininig the LSTM network across different seeds on the VSRI composite index
-│   │   ├── Appendix_C2_Disaggregated_Sub_Indices.ipynb                    # Notebook for traininig the LSTM network across different seeds on the disaggregate sub indicators
-│   │   ├── Appendix_C3_Stress_Proxy.ipynb                                 # Notebook for traininig the LSTM network across different seeds on market volatility
-├── README.md                # Project overview and documentation
-└── requirements.txt         # Project dependencies
+vietnam-systemic-risk-index/
+├── data/                    
+│   ├── vsri_construction/                    # Datasets for constructing the VSRI
+│   ├── machine_learning/                     # Datasets for the machine learning analysis
+│   │   └── ml_results/                       # Machine learning results
+│   └── appendix_c/                           # Robustness analysis results
+├── notebooks/               
+│   ├── vsri_framework.ipynb                  # Main notebook with all results
+│   ├── estimate_delta_covar.ipynb            # Delta CoVaRs estimation
+│   ├── estimate_granger.ipynb                # Granger coefficients estimation
+│   ├── machine_learning/                     # Notebooks for machine learning analysis
+│   └── appendix_c/                           # Notebooks for robustness analysis
+├── README.md                                 # Project overview and documentation
+└── requirements.txt                          # Project and Python dependencies
 ```
+The main entry point for reproducing the study is the notebook `vsri_framework.ipynb`, which contains the complete implementation of the VSRI framework and reproduces all the results presented in this repository. The remaining notebooks contain supporting analyses used to estimate the Delta CoVaRs and Granger coefficients required to construct two of the VSRI sub-indices, perform the machine learning experiments, and conduct the LSTM robustness check.
