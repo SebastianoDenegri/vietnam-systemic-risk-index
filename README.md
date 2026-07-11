@@ -1,6 +1,9 @@
 # Vietnam Systemic Risk Index (VSRI)
 ### A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction
-Python | Jupyter Notebook | Google Colab
+Python | Jupyter Notebook | Google Colab  
+
+**Authors:** Sebastiano Denegri and Thinh Cao  
+**Institution:** WorldQuant University - MSc. Financial Engineering
 
 ---
 ## Overview
