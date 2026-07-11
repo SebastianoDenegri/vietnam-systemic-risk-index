@@ -67,3 +67,13 @@ vietnam-systemic-risk-index/
 └── requirements.txt                          # Project and Python dependencies
 ```
 The main entry point for reproducing the study is the notebook `vsri_framework.ipynb`, which contains the complete implementation of the VSRI framework and reproduces all the results presented in this repository. The remaining notebooks contain supporting analyses used to estimate the Delta CoVaRs and Granger coefficients required to construct two of the VSRI sub-indices, perform the machine learning experiments, and conduct the LSTM robustness check.
+
+## Installation
+No local installation is required. The notebooks were developed and tested using **Google Colab**.
+To reproduce the analysis:
+1. Download the desired notebook from the `notebooks/` directory.
+2. Open it in Google Colab.
+3. Run the notebook.
+4. When prompted, **decline the Google Drive connection request** and upload the requested dataset from the repository's `data/` directory.
+
+To reproduce the complete study using `vsri_framework.ipynb`, the required datasets are located in the `data/vsri_construction/` and `data/machine_learning/ml_results/` directories.
