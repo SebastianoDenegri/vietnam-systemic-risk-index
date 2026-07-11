@@ -67,13 +67,26 @@ vietnam-systemic-risk-index/
 └── requirements.txt                          # Project and Python dependencies
 ```
 The main entry point for reproducing the study is the notebook `vsri_framework.ipynb`, which contains the complete implementation of the VSRI framework and reproduces all the results presented in this repository. The remaining notebooks contain supporting analyses used to estimate the Delta CoVaRs and Granger coefficients required to construct two of the VSRI sub-indices, perform the machine learning experiments, and conduct the LSTM robustness check.
+Each data/subdirectory contains a dedicated README.md describing its contents.
 
 ## Installation
 No local installation is required. The notebooks were developed and tested using **Google Colab**.
 To reproduce the analysis:
-1. Download the desired notebook from the `notebooks/` directory.
-2. Open it in Google Colab.
+1. Clone or download this repository.
+2. Open the desired notebook, from the `notebooks/` directory, in Google Colab.
 3. Run the notebook.
 4. When prompted, **decline the Google Drive connection request** and upload the requested dataset from the repository's `data/` directory.
 
 To reproduce the complete study using `vsri_framework.ipynb`, the required datasets are located in the `data/vsri_construction/` and `data/machine_learning/ml_results/` directories.
+
+## Usage
+The main notebook reproducing the complete study is:
+- `notebooks/vsri_framework.ipynb`
+
+Supporting notebooks include:
+- `notebooks/estimate_granger.ipynb` – Estimation of pairwise Granger coefficients across international markets necessary for the computation of the Vietnam Global Contagion Indicator (VGCI).
+- `notebooks/estimate_delta_covar.ipynb` – Estimation of single-company Delta_CoVaR estimation necessary for the computation of the the Vietnam Tail Risk Indicator (VTRI).
+- `notebooks/machine_learning/` – Notebooks for the financial stress prediction ML analysis. 
+- `notebooks/appendix_c/` – Notebooks for the LSTM robustness analysis across different initialization
+
+Each notebook will prompt the user to upload the required dataset from the corresponding folder under `data/`.
