@@ -89,8 +89,10 @@ The empirical analysis shows that the VSRI:
 - Brings incremental information about the buildup of risk beyond the information already contained in more conventional stress proxies.
 - May contain useful signals for systemic stress prediction, potentially capturing systemic vulnerability patterns more effectively than conventional risk proxies.
 
-![VSRI timeline](https://github.com/SebastianoDenegri/vietnam-systemic-risk-index/blob/main/images/vsri_timeline.png)
-&emsp;&emsp;&emsp;&emsp;*Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.*
+<img src="images/vsri_timeline.png">
+<p align="center">
+<em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
+</p>
 
 Among the evaluated models (Logistic Regression, SVM, and LSTM), the LSTM trained on the VSRI achieved the strongest out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**.
 
