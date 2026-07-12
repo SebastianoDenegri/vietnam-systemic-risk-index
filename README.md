@@ -119,7 +119,7 @@ vietnam-systemic-risk-index/
 │   ├── machine_learning/                     # Datasets for the machine learning analysis
 │   │   └── ml_results/                       # Machine learning results
 │   └── appendix_c/                           # Robustness analysis results
-├── images/                                   # Charts and Figures
+├── images/                                   # Charts and figures
 ├── notebooks/               
 │   ├── vsri_framework.ipynb                  # Main notebook with all results
 │   ├── estimate_delta_covar.ipynb            # Single-company Delta CoVaRs estimation
@@ -155,14 +155,14 @@ Supporting notebooks include:
 Each notebook will prompt the user to upload the required datasets from the corresponding folder under `data/`.
 
 ## Citation
-If you use the VSRI framework, methodology, or any part of code from this repository in academic work, research, or other projects, please cite this study and acknowledge the original authors:  
+If you use the VSRI framework, methodology, or any part of the code from this repository in academic work, research, or other projects, please cite this study and acknowledge the original authors:  
 > Denegri, Sebastiano, and Thinh Cao. A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction. Master of Science in Financial Engineering, WorldQuant University, 2026.
 
 ## License
-This project is licensed under the MIT license. See the <a href='https://github.com/SebastianoDenegri/vietnam-systemic-risk-index/blob/main/LICENSE'>'LICENSE'</a> file for details.  
-If you use the VSRI framework, methodology, or any part of code from this repository in academic work, research, or other projects, please cite this study as described in the **Citation** section.
+This project is licensed under the MIT License. See the 'LICENSE' file for details.  
+If you use the VSRI framework, methodology, or any part of the code from this repository in academic work, research, or other projects, please cite this study as described in the **Citation** section.
 
 ## Acknowledgments
 - WorldQuant University and the MSc in Financial Engineering program.
 - <a href='https://cafef.vn/'>CafeF</a>, <a href='https://finance.yahoo.com/'>Yahoo Finance</a>, and <a href='https://github.com/akfamily/akshare'>AKShare</a> for providing access to the data used in this research.
-- The Python community and the developers of the open-source libraries used that made developing the VSRI framework possible.
+- The Python community and the developers of the open-source libraries used to develop the VSRI framework.
