@@ -31,9 +31,7 @@ The proposed VSRI framework integrates five dimensions of financial risk:
                    │
  ┌────────┬────────┬────────┬────────┐
  │        │        │        │        │
- ▼        ▼        ▼        ▼        ▼
-VGCI    VMFI     VFTI     VTRI     VMII
-
+VGCI     VMFI    VFTI     VTRI     VMII
 ```
 
 We assess the contribution of each risk dimension to the overall systemic risk and we aggregate the sub-indices using a methodology inspired by the literature on composite systemic risk indices. The applied methodology integrates correlations amongst the risk drivers, thus capturing the systemic nature of financial distress, where co-movements across risk dimensions correspond to heightened systemic risk.
