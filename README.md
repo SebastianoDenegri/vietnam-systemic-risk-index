@@ -63,8 +63,8 @@ vietnam-systemic-risk-index/
 │   └── appendix_c/                           # Robustness analysis results
 ├── notebooks/               
 │   ├── vsri_framework.ipynb                  # Main notebook with all results
-│   ├── estimate_delta_covar.ipynb            # Delta CoVaRs estimation
-│   ├── estimate_granger.ipynb                # Granger coefficients estimation
+│   ├── estimate_delta_covar.ipynb            # Single-company Delta CoVaRs estimation
+│   ├── estimate_granger.ipynb                # Pairwise Granger coefficients estimation across international markets
 │   ├── machine_learning/                     # Notebooks for machine learning analysis
 │   └── appendix_c/                           # Notebooks for robustness analysis
 ├── README.md                                 # Project overview and documentation
@@ -84,8 +84,7 @@ To reproduce the analysis:
 To reproduce the complete study using `vsri_framework.ipynb`, the required datasets are located in the `data/vsri_construction/` and `data/machine_learning/ml_results/` directories.
 
 ## Usage
-The main notebook reproducing the complete study is:
-- `notebooks/vsri_framework.ipynb`
+The main notebook reproducing the complete study is: `notebooks/vsri_framework.ipynb`
 
 Supporting notebooks include:
 - `notebooks/estimate_granger.ipynb` – Estimation of pairwise Granger coefficients across international markets required for the computation of the Vietnam Global Contagion Indicator (VGCI).
@@ -93,4 +92,4 @@ Supporting notebooks include:
 - `notebooks/machine_learning/` – Notebooks for the financial stress prediction ML analysis. 
 - `notebooks/appendix_c/` – Notebooks for the LSTM robustness analysis across different random initializations.
 
-Each notebook will prompt the user to upload the required dataset from the corresponding folder under `data/`.
+Each notebook will prompt the user to upload the required datasets from the corresponding folder under `data/`.
