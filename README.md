@@ -19,20 +19,78 @@ The project aims to answer the following research questions:
 
 ## Methodology
 The proposed VSRI framework integrates five dimensions of financial risk:
-- External risk spillovers.
-- Domestic market fragility.
-- Financial turbulence.
-- Risk of downside tail co-movements.
-- Market illiquidity.
+- External risk spillovers (Vietnam Global Contagion Indicator - VGCI).
+- Domestic market fragility (Vietnam Market Fragility Indicator - VMFI).
+- Financial turbulence (Vietnam Financial Turbulence Indicator - VFTI).
+- Risk of downside tail co-movements (Vietnam Tail Risk Indicator - VTRI).
+- Market illiquidity (Vietnam Market Illiquidity Indicator - VMII).
+ 
+```text
+                  VSRI
+                   ▲
+                   │
+ ┌────────┬────────┬────────┬────────┐
+ │        │        │        │        │
+ ▼        ▼        ▼        ▼        ▼
+VGCI    VMFI     VFTI     VTRI     VMII
+
+```
 
 We assess the contribution of each risk dimension to the overall systemic risk and we aggregate the sub-indices using a methodology inspired by the literature on composite systemic risk indices. The applied methodology integrates correlations amongst the risk drivers, thus capturing the systemic nature of financial distress, where co-movements across risk dimensions correspond to heightened systemic risk.
 
+## Research Architecture
+```text
+┌──────────────────┐
+│  Data Gathering  │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│   Data Cleaning  │
+│      & EDA       │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│    Five Risk     │
+│    Dimensions    │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│ Composite Index  │
+│       VSRI       │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│   VSRI Economic  │
+│    Validation    │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│   ML Analysis &  │
+│    Prediction    │
+└──────────────────┘
+         │
+         ▼
+┌──────────────────┐
+│ LSTM Sensitivity │
+│     Analysis     │ 
+│   (Appendix C)   │
+└──────────────────┘
+```
+
 ## Results
 The empirical analysis shows that the VSRI:
-- Aligns with well-known periods of financial distress in the Vietnamese market.
+- Aligns with well-known periods of financial distress in the Vietnamese market.  
 - Captures periods of increased systemic risk across latent market regimes.
 - Brings incremental information about the buildup of risk beyond the information already contained in more conventional stress proxies.
 - May contain useful signals for systemic stress prediction, potentially capturing systemic vulnerability patterns more effectively than conventional risk proxies.
+
+![VSRI timeline](https://github.com/SebastianoDenegri/vietnam-systemic-risk-index/blob/main/images/vsri_timeline.png)
+&emsp;&emsp;&emsp;&emsp;*Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.*
 
 Among the evaluated models (Logistic Regression, SVM, and LSTM), the LSTM trained on the VSRI achieved the strongest out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**.
 
@@ -61,6 +119,7 @@ vietnam-systemic-risk-index/
 │   ├── machine_learning/                     # Datasets for the machine learning analysis
 │   │   └── ml_results/                       # Machine learning results
 │   └── appendix_c/                           # Robustness analysis results
+├── images/                                   # Charts and Figures
 ├── notebooks/               
 │   ├── vsri_framework.ipynb                  # Main notebook with all results
 │   ├── estimate_delta_covar.ipynb            # Single-company Delta CoVaRs estimation
