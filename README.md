@@ -67,6 +67,7 @@ vietnam-systemic-risk-index/
 │   ├── estimate_granger.ipynb                # Pairwise Granger coefficients estimation across international markets
 │   ├── machine_learning/                     # Notebooks for machine learning analysis
 │   └── appendix_c/                           # Notebooks for robustness analysis
+├── LICENSE                                   # MIT license
 ├── README.md                                 # Project overview and documentation
 └── requirements.txt                          # Project and Python dependencies
 ```
