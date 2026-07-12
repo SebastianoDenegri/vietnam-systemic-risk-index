@@ -93,7 +93,7 @@ Supporting notebooks include:
 - `notebooks/machine_learning/` – Notebooks for the financial stress prediction ML analysis. 
 - `notebooks/appendix_c/` – Notebooks for the LSTM robustness analysis across different random initializations.
 
-Each notebook will prompt the user to upload the required datasets from the corresponding folder under `data/`.\
+Each notebook will prompt the user to upload the required datasets from the corresponding folder under `data/`.
 
 ## Citation
 If you use the VSRI framework, methodology, or any part of code from this repository in academic work, research, or other projects, please cite this study and acknowledge the original authors:  
