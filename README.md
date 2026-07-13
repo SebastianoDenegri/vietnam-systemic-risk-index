@@ -159,7 +159,7 @@ If you use the VSRI framework, methodology, or any part of the code from this re
 > Denegri, Sebastiano, and Thinh Cao. A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction. Master of Science in Financial Engineering, WorldQuant University, 2026.
 
 ## License
-This project is licensed under the MIT License. See the 'LICENSE' file for details.  
+This project is licensed under the MIT License. See the `LICENSE` file for details.  
 If you use the VSRI framework, methodology, or any part of the code from this repository in academic work, research, or other projects, please cite this study as described in the **Citation** section.
 
 ## Acknowledgments
