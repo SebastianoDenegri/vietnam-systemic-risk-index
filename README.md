@@ -131,7 +131,7 @@ vietnam-systemic-risk-index/
 │   └── appendix_c/                           # Notebooks for robustness analysis
 ├── LICENSE                                   # MIT license
 ├── README.md                                 # Project overview and documentation
-└── requirements.txt                          # Project and Python dependencies
+└── requirements.txt                          # Python dependencies
 ```
 The main entry point for reproducing the study is the notebook `vsri_framework.ipynb`, which contains the complete implementation of the VSRI framework and reproduces all the results presented in this repository. The remaining notebooks contain supporting analyses used to estimate the Delta CoVaRs and Granger coefficients required to construct two of the VSRI sub-indices, perform the machine learning experiments, and conduct the LSTM robustness check.  
 Each subdirectory under `data/` contains a dedicated README.md describing its contents.
