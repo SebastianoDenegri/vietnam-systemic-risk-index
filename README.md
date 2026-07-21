@@ -37,7 +37,15 @@ The proposed VSRI framework integrates five dimensions of financial risk:
 VGCI     VMFI    VFTI     VTRI     VMII
 ```
 
-We assess the contribution of each risk dimension to the overall systemic risk and we aggregate the sub-indices using a methodology inspired by the literature on composite systemic risk indices. The applied methodology integrates correlations amongst the risk drivers, thus capturing the systemic nature of financial distress, where co-movements across risk dimensions correspond to heightened systemic risk.
+We assess the contribution of each risk dimension to the overall systemic risk and we aggregate the sub-indices using a methodology inspired by the literature on composite systemic risk indices. The applied methodology integrates correlations amongst the risk drivers, thus capturing the systemic nature of financial distress, where co-movements across risk dimensions correspond to heightened systemic risk.  
+
+To evaluate the predictive usefulness of the VSRI, we formulate a binary financial stress prediction task, where financial stress events are defined as the
+lowest 5th percentile of the empirical distribution of the Vietnamese market cumulative returns over a period of 20 days. Three alternative feature specifications are compared:
+- The VSRI.
+- The five disaggregated VSRI sub-indices.
+- Market volatility alone as a conventional stress proxy.
+
+We evaluate Logistic Regression, Support Vector Machines (SVM), and Long Short-Term Memory (LSTM) networks under each specification using out-of-sample performance.
 
 ## Research Architecture
 ```text
@@ -95,7 +103,7 @@ The empirical analysis shows that the VSRI:
 <em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
 </p>
 
-Among the evaluated models (Logistic Regression, SVM, and LSTM), the LSTM trained on the VSRI achieved the strongest out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**.
+The LSTM network trained on the VSRI achieved the strongest out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
 
 #### Summary of all Models’ Performance
 
@@ -110,6 +118,8 @@ Among the evaluated models (Logistic Regression, SVM, and LSTM), the LSTM traine
 |Logistic Regression (Volatility as Stress Proxy)|0.00|0.00|0.50|
 |Support Vector Machines (Volatility as Stress Proxy)|0.40|0.11|0.45|
 |Long Short-Term Memory RNN (Volatility as Stress Proxy)|1.00|0.11|0.69|
+
+Because neural networks are sensitive to random initialization, in Appendix C we perform a robustness check to verify whether the LSTM results are stable under different random seeds. The empirical findings show that the performance of the LSTM trained on market volatility tends to be quite unstable across the seeds, whilst the LSTM network trained on the VSRI shows generally stronger and more consistent performance metrics.
 
 The results of the study provide evidence that the VSRI can be a useful tool for Vietnamese financial regulators and policymakers, providing a rigorous framework able to quantify the current level of systemic risk, while also identifying the main drivers of systemic vulnerability, to inform risk management and financial policy decision-making.
 
