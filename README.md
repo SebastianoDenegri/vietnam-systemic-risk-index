@@ -11,7 +11,6 @@
 ---
 ## Publication
 **Working Paper:** <a href='https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7350481'>A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction</a>  
-**Authors:** Sebastiano Denegri and Thinh Cao  
 **SSRN:** <a href='https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7350481'>7350481</a>  
 **DOI:** <a href='http://dx.doi.org/10.2139/ssrn.7350481'>http://dx.doi.org/10.2139/ssrn.7350481</a>
 
@@ -109,7 +108,7 @@ The empirical analysis shows that the VSRI:
 <em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
 </p>
 
-The LSTM network trained on the VSRI achieved the strongest out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
+The LSTM network trained on the VSRI achieved the strongest overall out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
 
 #### Summary of all Models’ Performance
 
