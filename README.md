@@ -9,6 +9,12 @@
 **Institution:** WorldQuant University - MSc. Financial Engineering
 
 ---
+## Publication
+**Working Paper:** <a href='https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7350481'>A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction</a>  
+**Authors:** Sebastiano Denegri and Thinh Cao  
+**SSRN:** <a href='https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7350481'>7350481</a>  
+**DOI:** <a href='http://dx.doi.org/10.2139/ssrn.7350481'>http://dx.doi.org/10.2139/ssrn.7350481</a>
+
 ## Overview
 This repository presents a framework to quantify financial systemic risk in the Vietnamese market by developing a multi-dimensional composite index, the **Vietnam Systemic Risk Index (VSRI)**, capturing different drivers of financial vulnerability at any given point in time.
 
@@ -169,7 +175,7 @@ Each notebook will prompt the user to upload the required datasets from the corr
 
 ## Citation
 If you use the VSRI framework, methodology, or any part of the code from this repository in academic work, research, or other projects, please cite this study and acknowledge the original authors:  
-> Denegri, Sebastiano, and Thinh Cao. A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction. Master of Science in Financial Engineering, WorldQuant University, 2026.
+> Denegri, Sebastiano and Thinh Cao. "A Systemic Risk Framework for the Vietnamese Market: a Composite Risk Index and Financial Stress Prediction." *SSRN*, 2026. http://dx.doi.org/10.2139/ssrn.7350481.
 
 ## License
 This project is licensed under the MIT License. See the <a href='https://github.com/SebastianoDenegri/vietnam-systemic-risk-index/blob/main/LICENSE'>`LICENSE`</a> file for details.  
