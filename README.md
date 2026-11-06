@@ -22,7 +22,7 @@ The proposed analysis fills a gap in the current research on systemic risk for t
 
 ## Research Questions
 The project aims to answer the following research questions:
-- Can systemic risk in a “frontier-transitioning-to-emerging” market be effectively quantified through an equity-based composite index able to capture different dimensions of financial vulnerability?
+- Can systemic risk in an emerging market such as Vietnam be effectively quantified through an equity-based composite index able to capture different dimensions of financial vulnerability?
 - Can this index provide predictive signals of financial stress?
 
 ## Methodology
@@ -98,7 +98,7 @@ We evaluate Logistic Regression, Support Vector Machines (SVM), and Long Short-T
 ## Results
 The empirical analysis shows that the VSRI:
 - Aligns with well-known periods of financial distress in the Vietnamese market.  
-- Captures periods of increased systemic risk across latent market regimes, including those identified through the Vietnam Interbank Rate, that is even beyond the equity market.
+- Captures periods of increased systemic risk across latent market regimes even beyond the equity market.
 - Brings incremental information about the buildup of risk beyond the information already contained in more conventional stress proxies.
 - May contain useful signals for systemic stress prediction, potentially capturing systemic vulnerability patterns more effectively than conventional risk proxies.
 
@@ -107,8 +107,8 @@ The empirical analysis shows that the VSRI:
 <em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
 </p>
 
-The empiricak results also provide supporting evidence that the VSRI aggregation methodology produces a more sensitive index to regime changes than simpler aggregation alternatives.  
-The LSTM network trained on the VSRI achieved the strongest overall out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
+The empirical results also provide supporting evidence that the VSRI aggregation methodology produces a more sensitive index to regime changes than simpler aggregation alternatives.  
+The LSTM network trained on the VSRI achieved, overall, the most consistent out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
 
 #### Summary of all Models’ Performance
 
@@ -159,7 +159,7 @@ To reproduce the analysis:
 3. Run the notebook.
 4. When prompted, **decline the Google Drive connection request** and upload the requested dataset from the repository's `data/` directory.
 
-To reproduce the complete study using `vsri_framework.ipynb`, the required datasets are located in the `data/vsri_construction/` and `data/machine_learning/ml_results/` directories.
+To reproduce the complete study using `vsri_framework.ipynb`, the required datasets are located in the `data/vsri_construction/`, `data/machine_learning/ml_results/`, and `data/sensitivity_lstm/` directories.
 
 ## Usage
 The main notebook reproducing the complete study is: `notebooks/vsri_framework.ipynb`
