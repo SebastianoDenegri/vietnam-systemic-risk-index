@@ -113,7 +113,7 @@ The LSTM network trained on the VSRI achieved the strongest overall out-of-sampl
 #### Summary of all Models’ Performance
 
 |Model Setup|Recall|Precision|F1-Score|PR-AUC|ROC-AUC|
-|---|---:|---:|---:|
+|---|---:|---:|---:|---:|---:|
 |Logistic Regression (VSRI)|0.75|0.05|0.10|0.21|0.58|
 |Support Vector Machines (VSRI)|0.92|0.07|0.12|0.09|0.62|
 |**Long Short-Term Memory RNN (VSRI)**|**0.75**|**0.11**|**0.18**|**0.13**|**0.77**|
