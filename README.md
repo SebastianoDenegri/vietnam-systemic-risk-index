@@ -15,14 +15,14 @@
 **DOI:** <a href='http://dx.doi.org/10.2139/ssrn.7350481'>http://dx.doi.org/10.2139/ssrn.7350481</a>
 
 ## Overview
-This repository presents a framework to quantify financial systemic risk in the Vietnamese market by developing a multi-dimensional composite index, the **Vietnam Systemic Risk Index (VSRI)**, capturing different drivers of financial vulnerability at any given point in time.
+This repository presents a framework to quantify financial systemic risk in the Vietnamese market by developing, from easily accessible market data (stock prices and trading volumes), a multi-dimensional composite index, the **Vietnam Systemic Risk Index (VSRI)**, capturing different drivers of financial vulnerability at any given point in time.
 
 ## Motivation
-The proposed analysis fills a gap in the current research on systemic risk for the Vietnamese market, where, to the best of our knowledge, a unified measure of systemic risk is still missing. The scope of the project is to establish an operational, structured framework to quantify financial systemic risk in Vietnam, providing insights on the main drivers of financial distress in a young, fast-growing, and under-studied market.
+The proposed analysis fills a gap in the current research on systemic risk for the Vietnamese market, where, to the best of our knowledge, a unified measure of systemic risk is still missing. The scope of the project is to establish a structured, equity-based framework to quantify financial systemic risk in Vietnam, providing insights on the main drivers of financial distress in a young, fast-growing, and under-studied market.
 
 ## Research Questions
 The project aims to answer the following research questions:
-- Can systemic risk in a “frontier-transitioning-to-emerging” market be effectively quantified through a composite index able to capture different dimensions of financial vulnerability?
+- Can systemic risk in a “frontier-transitioning-to-emerging” market be effectively quantified through an equity-based composite index able to capture different dimensions of financial vulnerability?
 - Can this index provide predictive signals of financial stress?
 
 ## Methodology
@@ -50,7 +50,7 @@ lowest 5th percentile of the empirical distribution of the Vietnamese market cum
 - The five disaggregated VSRI sub-indices.
 - Market volatility alone as a conventional stress proxy.
 
-We evaluate Logistic Regression, Support Vector Machines (SVM), and Long Short-Term Memory (LSTM) networks under each specification using out-of-sample performance.
+We evaluate Logistic Regression, Support Vector Machines (SVM), and Long Short-Term Memory (LSTM) networks under each specification by comparing out-of-sample performance.
 
 ## Research Architecture
 ```text
@@ -92,14 +92,13 @@ We evaluate Logistic Regression, Support Vector Machines (SVM), and Long Short-T
 ┌──────────────────┐
 │ LSTM Sensitivity │
 │     Analysis     │ 
-│   (Appendix C)   │
 └──────────────────┘
 ```
 
 ## Results
 The empirical analysis shows that the VSRI:
 - Aligns with well-known periods of financial distress in the Vietnamese market.  
-- Captures periods of increased systemic risk across latent market regimes.
+- Captures periods of increased systemic risk across latent market regimes, including those identified through the Vietnam Interbank Rate, that is even beyond the equity market.
 - Brings incremental information about the buildup of risk beyond the information already contained in more conventional stress proxies.
 - May contain useful signals for systemic stress prediction, potentially capturing systemic vulnerability patterns more effectively than conventional risk proxies.
 
@@ -108,25 +107,26 @@ The empirical analysis shows that the VSRI:
 <em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
 </p>
 
+The empiricak results also provide supporting evidence that the VSRI aggregation methodology produces a more sensitive index to regime changes than simpler aggregation alternatives.  
 The LSTM network trained on the VSRI achieved the strongest overall out-of-sample performance, reaching a **recall of 75%** and a **ROC-AUC of 0.77**, showing that the composite VSRI provides more informative predictive features than either its individual sub-indices or market volatility alone.
 
 #### Summary of all Models’ Performance
 
-|Model Setup|Recall|F1-Score|ROC-AUC|
+|Model Setup|Recall|Precision|F1-Score|PR-AUC|ROC-AUC|
 |---|---:|---:|---:|
-|Logistic Regression (VSRI)|0.75|0.10|0.58|
-|Support Vector Machines (VSRI)|0.92|0.12|0.62|
-|**Long Short-Term Memory RNN (VSRI)**|**0.75**|**0.18**|**0.77**|
-|Logistic Regression (Disaggregated Sub-Indices)|0.96|0.15|0.58|
-|Support Vector Machines (Disaggregated Sub-Indices)|0.29|0.06|0.41|
-|Long Short-Term Memory RNN (Disaggregated Sub-Indices)|0.00|0.00|0.48|
-|Logistic Regression (Volatility as Stress Proxy)|0.00|0.00|0.50|
-|Support Vector Machines (Volatility as Stress Proxy)|0.40|0.11|0.45|
-|Long Short-Term Memory RNN (Volatility as Stress Proxy)|1.00|0.11|0.69|
+|Logistic Regression (VSRI)|0.75|0.05|0.10|0.21|0.58|
+|Support Vector Machines (VSRI)|0.92|0.07|0.12|0.09|0.62|
+|**Long Short-Term Memory RNN (VSRI)**|**0.75**|**0.11**|**0.18**|**0.13**|**0.77**|
+|Logistic Regression (Disaggregated Sub-Indices)|0.96|0.08|0.15|0.06|0.58|
+|Support Vector Machines (Disaggregated Sub-Indices)|0.29|0.04|0.06|0.04|0.41|
+|Long Short-Term Memory RNN (Disaggregated Sub-Indices)|0.00|0.00|0.00|0.05|0.48|
+|Logistic Regression (Volatility as Stress Proxy)|0.00|0.00|0.00|0.05|0.50|
+|Support Vector Machines (Volatility as Stress Proxy)|0.40|0.07|0.11|0.21|0.45|
+|Long Short-Term Memory RNN (Volatility as Stress Proxy)|1.00|0.06|0.11|0.09|0.69|
 
-Because neural networks are sensitive to random initialization, in Appendix C we perform a robustness check to verify whether the LSTM results are stable under different random seeds. The empirical findings show that the performance of the LSTM trained on market volatility tends to be quite unstable across the seeds, whilst the LSTM network trained on the VSRI shows generally stronger and more consistent performance metrics.
+Because neural networks are sensitive to random initialization, we perform a robustness check to verify whether the LSTM results are stable under different random seeds. The empirical findings show that the performance of the LSTM trained on market volatility tends to be quite unstable across the seeds, whilst the LSTM network trained on the VSRI shows generally stronger and more consistent performance metrics.
 
-The results of the study provide evidence that the VSRI can be a useful tool for Vietnamese financial regulators and policymakers, providing a rigorous framework able to quantify the current level of systemic risk, while also identifying the main drivers of systemic vulnerability, to inform risk management and financial policy decision-making.
+The results of the study provide evidence that the VSRI can be a useful tool for Vietnamese financial regulators and policymakers, providing a rigorous, equity-based framework able to quantify the current level of systemic risk, while also identifying the main drivers of systemic vulnerability, to inform risk management and financial policy decision-making.
 
 ## Repository Structure
 
@@ -136,14 +136,14 @@ vietnam-systemic-risk-index/
 │   ├── vsri_construction/                    # Datasets for constructing the VSRI
 │   ├── machine_learning/                     # Datasets for the machine learning analysis
 │   │   └── ml_results/                       # Machine learning results
-│   └── appendix_c/                           # Robustness analysis results
+│   └── sensitivity_lstm/                     # Robustness analysis results
 ├── images/                                   # Charts and figures
 ├── notebooks/               
 │   ├── vsri_framework.ipynb                  # Main notebook with all results
 │   ├── estimate_delta_covar.ipynb            # Single-company Delta CoVaRs estimation
 │   ├── estimate_granger.ipynb                # Pairwise Granger coefficients estimation across international markets
 │   ├── machine_learning/                     # Notebooks for machine learning analysis
-│   └── appendix_c/                           # Notebooks for robustness analysis
+│   └── sensitivity_lstm/                     # Notebooks for robustness analysis
 ├── LICENSE                                   # MIT license
 ├── README.md                                 # Project overview and documentation
 └── requirements.txt                          # Python dependencies
@@ -168,7 +168,7 @@ Supporting notebooks include:
 - `notebooks/estimate_granger.ipynb` – Estimation of pairwise Granger coefficients across international markets required for the computation of the Vietnam Global Contagion Indicator (VGCI).
 - `notebooks/estimate_delta_covar.ipynb` – Estimation of single-company Delta_CoVaRs required for the computation of the Vietnam Tail Risk Indicator (VTRI).
 - `notebooks/machine_learning/` – Notebooks for the financial stress prediction ML analysis. 
-- `notebooks/appendix_c/` – Notebooks for the LSTM robustness analysis across different random initializations.
+- `notebooks/sensitivity_lstm/` – Notebooks for the LSTM robustness analysis across different random initializations.
 
 Each notebook will prompt the user to upload the required datasets from the corresponding folder under `data/`.
 
