@@ -102,7 +102,7 @@ The empirical analysis shows that the VSRI:
 - Brings incremental information about the buildup of risk beyond the information already contained in more conventional stress proxies.
 - May contain useful signals for systemic stress prediction, potentially capturing systemic vulnerability patterns more effectively than conventional risk proxies.
 
-<img src="images/vsri_timeline.png">
+<img src="graphics/vsri_timeline.png">
 <p align="center">
 <em>Figure 1. Vietnam Systemic Risk Index (VSRI) over time. Peaks correspond to periods of financial stress in the Vietnamese market.</em>
 </p>
